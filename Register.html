@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GESTIAI - Inscription</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- ALERT -->
+<div class="alert" id="alert"></div>
+
+<!-- ==================== PAGE: INSCRIPTION ==================== -->
+<div id="page-inscription" class="page bg-inscription active">
+  <div class="inscription-card">
+    <div class="inscription-left">
+      <h2>BIENVENUE SUR</h2>
+      <div class="inscription-logo">
+        <span class="G">G</span><span class="E">E</span><span class="S">S</span><span class="T">T</span><span class="I">I</span><span class="A2">A</span><span class="I2">I</span>
+      </div>
+      <p>C r é e z&nbsp; v o t r e&nbsp; c o m p t e&nbsp; p o u r<br>c o m m e n c e r</p>
+    </div>
+    <div class="inscription-right">
+      <h1>Inscription</h1>
+      <div class="form-group">
+        <label>Matricule</label>
+        <input type="text" id="reg-matricule" placeholder="Votre matricule">
+      </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" id="reg-nom" placeholder="Votre nom complet">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="reg-email" placeholder="Votre email">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" id="reg-password" placeholder="Choisissez un mot de passe">
+      </div>
+      <div class="form-group">
+        <label>Téléphone</label>
+        <input type="tel" id="reg-phone" placeholder="Votre numéro de téléphone">
+      </div>
+      <button class="btn-envoyer" onclick="handleInscription()">Envoyer</button>
+      <p class="form-note">Systeme de gestion inteligente d'assiduite de l'IAI de Mbalmayo.</p>
+      <p class="form-note" style="margin-top:8px;">Déjà un compte ? <a href="connexion.html" style="color:var(--dark-green);font-weight:600;">Se connecter</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

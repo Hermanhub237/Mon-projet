@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GESTIAI - Connexion</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- ALERT -->
+<div class="alert" id="alert"></div>
+
+<!-- ==================== PAGE: CONNEXION ==================== -->
+<div id="page-connexion" class="page bg-connexion active">
+  <div class="connexion-card">
+    <div class="connexion-left">
+      <h2>BON RETOUR<br>PARMI NOUS</h2>
+      <p>Connectez vous pour accéder à <span>GESTIAI</span></p>
+    </div>
+    <div class="connexion-right">
+      <h1>Connexion</h1>
+      <div class="form-group">
+        <label>Matricule</label>
+        <input type="text" id="login-matricule" placeholder="Votre matricule">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="Votre email">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" id="login-password" placeholder="Votre mot de passe">
+      </div>
+      <button class="btn-envoyer" onclick="handleConnexion()">Envoyer</button>
+      <p class="form-note">Systeme de gestion inteligente d'assiduite de l'IAI de Mbalmayo.</p>
+      <p class="form-note" style="margin-top:8px;">Pas encore de compte ? <a href="inscription.html" style="color:var(--green);font-weight:600;">S'inscrire</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

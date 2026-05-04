@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GESTIAI - Accueil</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- ALERT -->
+<div class="alert" id="alert"></div>
+
+<!-- ==================== PAGE: ACCUEIL ==================== -->
+<div id="page-accueil" class="page bg-accueil active">
+  <div class="accueil-header">
+    <div class="logo-gestiai">
+      <span class="logo-cap">🎓</span>
+      <div class="logo-text">
+        <span class="G">G</span><span class="E">E</span><span class="S">S</span><span class="T">T</span><span class="I">I</span><span class="A2">A</span><span class="I2">I</span>
+      </div>
+    </div>
+    <p class="accueil-subtitle">Systeme de gestion inteligente d'assiduite de l'IAI de Mbalmayo</p>
+  </div>
+
+  <div class="accueil-btns">
+    <button class="btn-outline" onclick="window.location.href='connexion.html'">Connexion</button>
+    <button class="btn-solid" onclick="window.location.href='inscription.html'">Inscription</button>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card border-green" onclick="showAlert('Accueil - Vue d\'ensemble personnalisée')">
+      <div class="card-icon">🏠</div>
+      <div class="card-title green">Accueil</div>
+      <div class="card-desc">Vue d'ensemble personnalisee de l'activte de l'enseignant</div>
+    </div>
+    <div class="card border-orange" onclick="showAlert('Mes présences - Gestion en temps réel')">
+      <div class="card-icon">✅</div>
+      <div class="card-title orange">Mes presences</div>
+      <div class="card-desc">Gestion et suivi de l'activite en temps reel</div>
+    </div>
+    <div class="card border-yellow" onclick="showAlert('Mon emploi du temps - Planning hebdomadaire')">
+      <div class="card-icon">📅</div>
+      <div class="card-title yellow">Mon emploi du temps</div>
+      <div class="card-desc">Affichage du planning hebdomadaire assigne</div>
+    </div>
+    <div class="card border-orange" onclick="showAlert('Mon historique - Archives des présences')">
+      <div class="card-icon">📄</div>
+      <div class="card-title orange">Mon historique</div>
+      <div class="card-desc">Archive complete des enregistrments de presence</div>
+    </div>
+    <div class="card border-green" onclick="showAlert('Mon quota horaire - Volume réalisé')">
+      <div class="card-icon">⏰</div>
+      <div class="card-title green">Mon quota horaire</div>
+      <div class="card-desc">Suivi du volume horaire realise par l'enseignant</div>
+    </div>
+    <div class="card border-orange" onclick="showAlert('Mon profil - Paramètres du compte')">
+      <div class="card-icon">👤</div>
+      <div class="card-title orange">Mon profil</div>
+      <div class="card-desc">Gestion du compte et des parametres personnels</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

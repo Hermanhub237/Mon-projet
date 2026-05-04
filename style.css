@@ -1,0 +1,407 @@
+ :root {
+    --green: #2ecc40;
+    --dark-green: #1a7a2a;
+    --yellow: #d4b800;
+    --orange: #e67e00;
+    --red: #e74c3c;
+    --white: #ffffff;
+    --cream: #f5f5e8;
+    --text-dark: #1a3a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ===== BACKGROUNDS ===== */
+  .bg-connexion {
+    background: radial-gradient(ellipse #ffffff);
+  }
+  .bg-accueil {
+    background: linear-gradient(135deg, #ffffff);
+  }
+  .bg-inscription {
+    background: linear-gradient(160deg,#ffffff);
+  }
+
+  /* ===== PAGE SYSTEM ===== */
+  .page { display: none; min-height: 100vh; }
+  .page.active { display: flex; }
+
+  /* ===== CONNEXION PAGE ===== */
+  #page-connexion {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connexion-card {
+    display: flex;
+    width: 680px;
+    min-height: 420px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    animation: slideUp 0.6s ease;
+  }
+
+  .connexion-left {
+    background: #2ecc40;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+  }
+
+  .connexion-left h2 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 0.3em;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  .connexion-left p {
+    color: #1a3a1a;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .connexion-left p span {
+    font-family: 'Playfair Display', serif;
+    color: #f5e800;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .connexion-right {
+    background: white;
+    flex: 1.1;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .connexion-right h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  /* ===== FORM STYLES ===== */
+  .form-group { margin-bottom: 16px; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+    background: white;
+  }
+
+  .form-group input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(46,204,64,0.15);
+  }
+
+  .btn-envoyer {
+    width: 100%;
+    padding: 13px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: all 0.3s;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-envoyer:hover {
+    background: var(--dark-green);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(46,204,64,0.4);
+  }
+
+  .form-note {
+    font-size: 0.68rem;
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+
+  /* ===== ACCUEIL PAGE ===== */
+  #page-accueil {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 36px 24px 40px;
+    overflow-y: auto;
+  }
+
+  .accueil-header {
+    text-align: center;
+    margin-bottom: 32px;
+    animation: fadeDown 0.6s ease;
+  }
+
+  .logo-gestiai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .logo-cap { font-size: 2.4rem; }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .logo-text .G { color: var(--green); }
+  .logo-text .E { color: var(--red); }
+  .logo-text .S { color: var(--orange); }
+  .logo-text .T { color: var(--yellow); }
+  .logo-text .I { color: var(--dark-green); }
+  .logo-text .A2 { color: var(--green); }
+  .logo-text .I2 { color: var(--orange); }
+
+  .accueil-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  .accueil-btns {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 36px;
+    animation: fadeDown 0.7s ease;
+  }
+
+  .btn-outline {
+    padding: 10px 32px;
+    border-radius: 30px;
+    border: 2px solid var(--dark-green);
+    background: white;
+    color: var(--green);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover { background: var(--green); color: white; }
+
+  .btn-solid {
+    padding: 10px 32px;
+    border-radius: 30px;
+    border: none;
+    background: var(--dark-green);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-solid:hover { background: #0f5a1a; transform: translateY(-2px); }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeUp 0.8s ease;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
+
+  .card.border-green { border: 2.5px solid var(--green); }
+  .card.border-orange { border: 2.5px solid var(--orange); }
+  .card.border-yellow { border: 2.5px solid var(--yellow); }
+
+  .card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  .card-title.green { color: var(--green); }
+  .card-title.orange { color: var(--orange); }
+  .card-title.yellow { color: var(--yellow); }
+
+  .card-desc {
+    font-size: 0.78rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* ===== INSCRIPTION PAGE ===== */
+  #page-inscription {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inscription-card {
+    display: flex;
+    width: 720px;
+    min-height: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: slideUp 0.6s ease;
+  }
+
+  .inscription-left {
+    background: linear-gradient(160deg, #f5e800 0%, #88cc00 100%);
+    flex: 0.85;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 28px;
+  }
+
+  .inscription-left h2 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 0.25em;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
+  .inscription-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .inscription-logo .G { color: var(--green); }
+  .inscription-logo .E { color: var(--red); }
+  .inscription-logo .S { color: var(--orange); }
+  .inscription-logo .T { color: var(--yellow); }
+  .inscription-logo .I { color: var(--dark-green); }
+  .inscription-logo .A2 { color: var(--green); }
+  .inscription-logo .I2 { color: var(--orange); }
+
+  .inscription-left p {
+    color: #1a5a1a;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .inscription-right {
+    background: var(--cream);
+    flex: 1.2;
+    padding: 36px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .inscription-right h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+
+  .inscription-right .form-group input {
+    background: var(--cream);
+    border: 1.5px solid #bbb;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== ALERT ===== */
+  .alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #1a7a2a;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    display: none;
+    animation: slideUp 0.3s ease;
+  }
+
+  .alert.error { background: #c0392b; }
+  .alert.show { display: block; }
